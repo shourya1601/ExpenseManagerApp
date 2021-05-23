@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/listitem_data"
+            android:layout_margin="4dp">
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:orientation="vertical"
+                android:background="@drawable/outline">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:id="@+id/tvCategory"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amount"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:id="@+id/tvAmount"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/view"
+                    android:background="@drawable/outline"
+                    android:layout_centerVertical="true"/>
+
+                <ImageButton
+                    android:id="@+id/btn_update"
+                    android:layout_toRightOf="@+id/btn_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/update_categories"
+                    android:background="@drawable/outline"
+                    android:layout_centerVertical="true"/>
+
+                <ImageButton
+                    android:id="@+id/btn_delete"
+                    android:layout_toRightOf="@+id/btn_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/delete"
+                    android:background="@drawable/outline"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>

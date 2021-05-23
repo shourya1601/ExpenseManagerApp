@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tabHost"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@android:id/tabs"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@android:id/tabcontent">
+
+            <LinearLayout
+                android:id="@+id/tabcontent1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ScrollView
+                    android:id="@+id/scrollview"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/complete"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#f5bceb">
+
+                        <RelativeLayout
+                            android:id="@+id/rl1"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:background="#0e134f">
+
+                            <ViewFlipper
+                                android:id="@+id/vf"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="30dp"
+                                android:focusable="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:background="@drawable/main_view_flipper">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/img3"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:background="@drawable/main_view_flipper">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/img2"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:background="@drawable/main_view_flipper">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/img1"/>
+
+                                </LinearLayout>
+
+                            </ViewFlipper>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl1"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  OPTIONS->  "
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:textColor="#ffffff"
+                                android:background="@drawable/main_side_text"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl3"
+                            android:layout_below="@+id/rl2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <GridLayout
+                                android:id="@+id/gl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:rowCount="3"
+                                android:columnCount="2"
+                                android:layout_margin="10dp">
+
+                                <ImageButton
+                                    android:id="@+id/income"
+                                    android:layout_width="0dp"
+                                    android:layout_rowWeight="1"
+                                    android:layout_columnWeight="1"
+                                    android:layout_row="0"
+                                    android:layout_column="0"
+                                    android:src="@drawable/input"
+                                    android:layout_margin="5dp"
+                                    android:background="#ffd9a1"/>
+
+                                <ImageButton
+                                    android:id="@+id/passbook"
+                                    android:layout_width="0dp"
+                                    android:layout_rowWeight="1"
+                                    android:layout_columnWeight="1"
+                                    android:layout_row="0"
+                                    android:layout_column="1"
+                                    android:src="@drawable/passbook"
+                                    android:layout_margin="5dp"
+                                    android:background="#ffd9a1"/>
+
+
+                                <ImageButton
+                                    android:id="@+id/cat"
+                                    android:layout_width="0dp"
+                                    android:layout_rowWeight="1"
+                                    android:layout_columnWeight="1"
+                                    android:layout_row="1"
+                                    android:layout_column="0"
+                                    android:src="@drawable/manage_categories"
+                                    android:layout_margin="5dp"
+                                    android:background="#ffd9a1"/>
+
+                                <ImageButton
+                                    android:id="@+id/cdr"
+                                    android:layout_width="0dp"
+                                    android:layout_rowWeight="1"
+                                    android:layout_columnWeight="1"
+                                    android:layout_row="1"
+                                    android:layout_column="1"
+                                    android:src="@drawable/custom_date"
+                                    android:layout_margin="5dp"
+                                    android:background="#ffd9a1"/>
+
+                                <ImageButton
+                                    android:id="@+id/budget"
+                                    android:layout_width="0dp"
+                                    android:layout_row="2"
+                                    android:layout_rowWeight="1"
+                                    android:layout_column="0"
+                                    android:layout_columnWeight="1"
+                                    android:src="@drawable/budget"
+                                    android:layout_margin="5dp"
+                                    android:background="#ffd9a1"/>
+
+                                <ImageButton
+                                    android:id="@+id/help"
+                                    android:layout_width="0dp"
+                                    android:layout_rowWeight="1"
+                                    android:layout_columnWeight="1"
+                                    android:layout_row="2"
+                                    android:layout_column="1"
+                                    android:src="@drawable/help"
+                                    android:layout_margin="5dp"
+                                    android:background="#ffd9a1"/>
+
+                            </GridLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  FOR LAST 30 DAYS->  "
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:textColor="#ffffff"
+                                android:background="@drawable/main_side_text"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl5"
+                            android:layout_below="@+id/rl4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_margin="10dp">
+
+                            <com.github.mikephil.charting.charts.BarChart
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:id="@+id/bar"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl6"
+                            android:layout_below="@+id/rl5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  ADVICE->  "
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:textColor="#ffffff"
+                                android:background="@drawable/main_side_text"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/rl7"
+                            android:layout_below="@+id/rl6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_margin="10dp">
+
+                            <VideoView
+                                android:id="@+id/vv"
+                                android:layout_width="match_parent"
+                                android:layout_height="225dp"
+                                android:layout_weight="1"/>
+
+                            <VideoView
+                                android:id="@+id/vv1"
+                                android:layout_marginTop="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="225dp"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_below="@+id/rl7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:padding="30dp"
+                            android:background="#ffffff">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/app_icon"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tabcontent2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="#f5bceb">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">x
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="  WEEK->      "
+                            android:textStyle="bold"
+                            android:textSize="25dp"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/main_side_text"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/round_border"
+                            android:padding="10dp">
+
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:id="@+id/pie1"
+                                android:contentDescription="CATEGORY WISE EXPENSES"/>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvsum1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="  SUM-> Rs. "
+                            android:textStyle="bold"
+                            android:textSize="25dp"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/main_side_text"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  DETAILS->  "
+                                android:textStyle="bold"
+                                android:textSize="25dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/main_side_text"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv1"
+                                android:layout_width="match_parent"
+                                android:layout_height="555dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tabcontent3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="#f5bceb">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">x
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="  MONTH->      "
+                            android:textStyle="bold"
+                            android:textSize="25dp"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/main_side_text"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/round_border"
+                            android:padding="10dp">
+
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:id="@+id/pie2"
+                                android:contentDescription="CATEGORY WISE EXPENSES"/>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvsum2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="  SUM-> Rs. "
+                            android:textStyle="bold"
+                            android:textSize="25dp"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/main_side_text"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  DETAILS->  "
+                                android:textStyle="bold"
+                                android:textSize="25dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/main_side_text"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv2"
+                                android:layout_width="match_parent"
+                                android:layout_height="555dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tabcontent4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="#f5bceb">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">x
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="  YEAR->      "
+                            android:textStyle="bold"
+                            android:textSize="25dp"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/main_side_text"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/round_border"
+                            android:padding="10dp">
+
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:id="@+id/pie3"
+                                android:contentDescription="CATEGORY WISE EXPENSES"/>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvsum3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="  SUM-> Rs. "
+                            android:textStyle="bold"
+                            android:textSize="25dp"
+                            android:textColor="#ffffff"
+                            android:background="@drawable/main_side_text"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  DETAILS->  "
+                                android:textStyle="bold"
+                                android:textSize="25dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/main_side_text"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv3"
+                                android:layout_width="match_parent"
+                                android:layout_height="555dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</TabHost>

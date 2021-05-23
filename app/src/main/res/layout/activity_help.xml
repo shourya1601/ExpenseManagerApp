@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  FAQs->  "
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/main_side_text"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_below="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="#000000"
+                    android:text="Question 1. What does expense manager do?\nAnswer 1. When it helps record and manage day to day expenses of an individual.\n\nQuestion 2. What does the input expense button do ?\nAnswer 2. With the help of this button ,  one can enter the amount of money spent on a particular day and write a short note as to what it was spent on .\n\nQuestion 3. What does the passbook button do ?\nAnswer 3. It is somewhat like a bank passbook where you can enter any particular entry or update it .\n\nQuestion 4. Does the manage categories button do ?\nAnswer 4. It provides you with categories in which you can categorise your expenses you can add more categories if you want to . You can exchange category names and update the data of expenses in any category . You can also deleted category along with the entire data in it . It also shows your expenses in a pie chart .\n\nQuestion 5. What does the custom date range button do ?\nAnswer 5. It shows the expenses from the selected data to another selected date .\n\nQuestion 6. What does the home tab do ?\nAnswer 6. It holds all the above mentioned buttons. It also gives you some money and expenses related advice .\n\nQuestion 7. What do the week, month and year tab do?\nAnswer 7. It shows the details of expenses in the last seven days, current month and year ."/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

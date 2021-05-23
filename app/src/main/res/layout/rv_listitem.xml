@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+            <RelativeLayout
+                android:id="@+id/left"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:background="#bae5f7"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textColor="#73056a"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/right"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:background="#03b1fc"
+                android:layout_alignParentRight="true"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:id="@+id/btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="7dp"
+                    android:src="@drawable/update_categories"
+                    android:background="@drawable/outline"/>
+
+                <ImageButton
+                    android:id="@+id/btn1"
+                    android:layout_toRightOf="@+id/btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/delete"
+                    android:background="@drawable/outline"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mid"
+                android:layout_toRightOf="@+id/left"
+                android:layout_toLeftOf="@+id/right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:background="#8cddff">
+
+                <TextView
+                    android:id="@+id/tvAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Amt"
+                    android:textColor="#111e5c"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed-medium" />
+
+                <TextView
+                    android:id="@+id/tvCat"
+                    android:layout_below="@+id/tvAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Category"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed-medium"/>
+
+                <TextView
+                    android:id="@+id/tvNote"
+                    android:layout_below="@+id/tvCat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Note"
+                    android:textColor="#333333"
+                    android:textSize="15dp"
+                    android:textStyle="italic"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+</LinearLayout>
